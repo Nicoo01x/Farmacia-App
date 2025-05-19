@@ -11,15 +11,16 @@ struct Producto {
     int stock = 0;
 };
 
+
 void ingresarproducto(Producto& producto) { //funciones: Donda, Patino, Mancini, Rochetti
-    cout << "Ingrese el nombre del producto: ";
-    cin.ignore(); // Limpiar el buffer antes de getline
+    cout << "Nombre del producto: ";
+    cin.ignore(); 
     getline(cin, producto.nombre);
-    cout << "Ingrese el codigo del producto: ";
+    cout << "Codigo: ";
     cin >> producto.codigo;
-    cout << "Ingrese el precio del producto: ";
+    cout << "Precio: ";
     cin >> producto.precio;
-    cout << "Ingrese el stock del producto: ";
+    cout << "Stock: ";
     cin >> producto.stock;
 }
 
