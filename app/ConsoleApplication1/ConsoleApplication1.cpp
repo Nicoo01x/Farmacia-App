@@ -106,7 +106,7 @@ int main() { //Main: Cabanillas
             calcularinventario(productos, numProductos);
             break;
         case 5:
-            cout << "Saliendo del programa." << endl;
+            cout << "Saliendo del programa..." << endl;
             break;
         default:
             cout << "Opcion no valida. Intente de nuevo." << endl;
