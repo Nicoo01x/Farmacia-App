@@ -13,7 +13,6 @@ struct Producto {
 };
 
 void ingresarproducto(Producto& producto) {
-	int stock = 0;
 
 	cout << "Ingrese el nombre del producto: ";
 	cin >> producto.nombre;
@@ -23,31 +22,27 @@ void ingresarproducto(Producto& producto) {
 	cin >> producto.precio;
 	cout << "Ingrese el stock del producto: ";
 	cin >> producto.stock;
-	if (producto.stock < 10) {
-        stock++;
-	}
 }
 
-void mostrarproductos(Producto& producto) {
-    for (int i = 0; i < producto; ++i) {
+void mostrarproductos(Producto productos[], int numProductos) {
+    for (int i = 0; i < numProductos; ++i) {
         cout << "Producto #" << i + 1 << ":" << endl;
-        cout << "Nombre: " << producto[i].nombre << endl;
-        cout << "Código: " << producto[i].codigo << endl;
-        cout << "Precio: $" << producto[i].precio << endl;
-        cout << "Stock: " << producto[i].stock << endl;
+        cout << "Nombre: " << productos[i].nombre << endl;
+        cout << "Código: " << productos[i].codigo << endl;
+        cout << "Precio: $" << productos[i].precio << endl;
+        cout << "Stock: " << productos[i].stock << endl;
     }
 }
 
-void filtrarproductos(Producto& producto) {
+void filtrarproductos(Producto productos[], int numProductos) {
 	cout << "Productos con stock menor a 10:\n";
-	for (int i = 0; i < producto; ++i) {
-		if (producto[i].stock < 10) {
-			cout << "Nombre: " << producto[i].nombre << ", Código: " << producto[i].codigo
-				<< ", Precio: $" << producto[i].precio << ", Stock: " << producto[i].stock << endl;
+	for (int i = 0; i < numProductos; ++i) {
+		if (productos[i].stock < 10) {
+			cout << "Nombre: " << productos[i].nombre << ", Código: " << productos[i].codigo
+				<< ", Precio: $" << productos[i].precio << ", Stock: " << productos[i].stock << endl;
 		}
-	}
     }
-void calcularinventario(Producto& producto) {
+void calcularinventario(Producto& productos) {
 	int valortotal = 0;
 	valortotal = producto.precio * producto.stock;
 	cout << "Valor total del inventario: " << valortotal << endl;
@@ -86,6 +81,5 @@ int main() {
         cout << "Nombre: " << productos[i].nombre << ", Codigo: " << productos[i].codigo
             << ", Precio: " << productos[i].precio << ", Stock: " << productos[i].stock << endl;
     }
-    cout << "Cantidad de productos con stock menor a 10: " << filtrostock << endl;
     return 0;
 }
