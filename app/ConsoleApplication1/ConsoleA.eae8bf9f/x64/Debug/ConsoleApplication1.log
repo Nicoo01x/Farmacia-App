@@ -1,10 +1,2 @@
 ﻿  ConsoleApplication1.cpp
-C:\Users\Pc\Documents\GitHub\Farmacia-App\app\ConsoleApplication1\ConsoleApplication1.cpp(45,6): error C2601: 'calcularinventario': las definiciones de funciones locales no son válidas
-      C:\Users\Pc\Documents\GitHub\Farmacia-App\app\ConsoleApplication1\ConsoleApplication1.cpp(37,63):
-      esta línea contiene un elemento '{' y no se ha encontrado su elemento de cierre
-  
-C:\Users\Pc\Documents\GitHub\Farmacia-App\app\ConsoleApplication1\ConsoleApplication1.cpp(51,5): error C2601: 'main': las definiciones de funciones locales no son válidas
-      C:\Users\Pc\Documents\GitHub\Farmacia-App\app\ConsoleApplication1\ConsoleApplication1.cpp(37,63):
-      esta línea contiene un elemento '{' y no se ha encontrado su elemento de cierre
-  
-C:\Users\Pc\Documents\GitHub\Farmacia-App\app\ConsoleApplication1\ConsoleApplication1.cpp(37,63): error C1075: "{": no se encontró ningún token coincidente
+  ConsoleApplication1.vcxproj -> C:\Users\nicoc\OneDrive\Escritorio\Nueva carpeta\Farmacia-App\app\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe
