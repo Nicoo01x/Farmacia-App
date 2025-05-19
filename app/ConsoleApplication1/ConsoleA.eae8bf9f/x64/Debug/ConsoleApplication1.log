@@ -1,0 +1,9 @@
+﻿  ConsoleApplication1.cpp
+C:\Users\Pc\Documents\GitHub\Farmacia-App\app\ConsoleApplication1\ConsoleApplication1.cpp(32,13): error C2065: 'nombre': identificador no declarado
+C:\Users\Pc\Documents\GitHub\Farmacia-App\app\ConsoleApplication1\ConsoleApplication1.cpp(35,22): error C2065: 'precio': identificador no declarado
+C:\Users\Pc\Documents\GitHub\Farmacia-App\app\ConsoleApplication1\ConsoleApplication1.cpp(35,31): error C2065: 'stock': identificador no declarado
+C:\Users\Pc\Documents\GitHub\Farmacia-App\app\ConsoleApplication1\ConsoleApplication1.cpp(37,13): error C2065: 'stock': identificador no declarado
+C:\Users\Pc\Documents\GitHub\Farmacia-App\app\ConsoleApplication1\ConsoleApplication1.cpp(41,37): error C2065: 'nombre': identificador no declarado
+C:\Users\Pc\Documents\GitHub\Farmacia-App\app\ConsoleApplication1\ConsoleApplication1.cpp(41,45): error C2065: 'codigo': identificador no declarado
+C:\Users\Pc\Documents\GitHub\Farmacia-App\app\ConsoleApplication1\ConsoleApplication1.cpp(41,53): error C2065: 'precio': identificador no declarado
+C:\Users\Pc\Documents\GitHub\Farmacia-App\app\ConsoleApplication1\ConsoleApplication1.cpp(41,61): error C2065: 'stock': identificador no declarado

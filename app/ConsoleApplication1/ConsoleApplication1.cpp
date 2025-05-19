@@ -11,6 +11,28 @@ struct Producto {
     int stock = 0; // Inicialización por defecto
 };
 
+void ingresarproducto(Producto& producto) {
+	int stock = 0;
+
+	cout << "Ingrese el nombre del producto: ";
+	cin >> producto.nombre;
+	cout << "Ingrese el codigo del producto: ";
+	cin >> producto.codigo;
+	cout << "Ingrese el precio del producto: ";
+	cin >> producto.precio;
+	cout << "Ingrese el stock del producto: ";
+	cin >> producto.stock;
+	if (producto.stock < 10) {
+        stock++;
+	}
+}
+void mostrarproductos(Producto& producto) {
+	cout << "Nombre: " << producto.nombre << endl;
+	cout << "Codigo: " << producto.codigo << endl;
+	cout << "Precio: " << producto.precio << endl;
+	cout << "Stock: " << producto.stock << endl;
+}
+
 int main() {
     Producto productos[MAX_PRODUCTOS];
     int numProductos = 0;
@@ -18,23 +40,10 @@ int main() {
     int valortotal = 0;
 
     while (true) {
-        cout << "Ingrese el nombre, codigo, precio y stock del producto (o 'salir' para terminar o mostrar la tabla de productos): " << endl;
-        cout << "Nombre: " << endl;
-        string nombre;
-        cin >> nombre;
-
+       
         if (nombre == "salir") {
             break;
         }
-        cout << "Codigo: " << endl;
-        int codigo;
-        cin >> codigo;
-        cout << "Precio: " << endl;
-        float precio;
-        cin >> precio;
-        cout << "Stock: " << endl;
-        int stock;
-        cin >> stock;
         valortotal = precio * stock;
 
         if (stock < 10) {
@@ -51,6 +60,5 @@ int main() {
             << ", Precio: " << productos[i].precio << ", Stock: " << productos[i].stock << endl;
     }
     cout << "Cantidad de productos con stock menor a 10: " << filtrostock << endl;
-
-    return 0;
+    return 0;
 }
