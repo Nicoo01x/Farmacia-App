@@ -6,9 +6,10 @@ const int MAX_PRODUCTOS = 100;
 
 struct Producto {
     string nombre;
-    int codigo = 0; // Inicialización por defecto
-    float precio = 0.0f; // Inicialización por defecto
-    int stock = 0; // Inicialización por defecto
+    int codigo = 0; 
+    float precio = 0.0; 
+    int stock = 0; 
+	int cantidad = 0;
 };
 
 void ingresarproducto(Producto& producto) {
@@ -26,11 +27,30 @@ void ingresarproducto(Producto& producto) {
         stock++;
 	}
 }
+
 void mostrarproductos(Producto& producto) {
-	cout << "Nombre: " << producto.nombre << endl;
-	cout << "Codigo: " << producto.codigo << endl;
-	cout << "Precio: " << producto.precio << endl;
-	cout << "Stock: " << producto.stock << endl;
+    for (int i = 0; i < producto; ++i) {
+        cout << "Producto #" << i + 1 << ":" << endl;
+        cout << "Nombre: " << producto[i].nombre << endl;
+        cout << "Código: " << producto[i].codigo << endl;
+        cout << "Precio: $" << producto[i].precio << endl;
+        cout << "Stock: " << producto[i].stock << endl;
+    }
+}
+
+void filtrarproductos(Producto& producto) {
+	cout << "Productos con stock menor a 10:\n";
+	for (int i = 0; i < producto; ++i) {
+		if (producto[i].stock < 10) {
+			cout << "Nombre: " << producto[i].nombre << ", Código: " << producto[i].codigo
+				<< ", Precio: $" << producto[i].precio << ", Stock: " << producto[i].stock << endl;
+		}
+	}
+    }
+void calcularinventario(Producto& producto) {
+	int valortotal = 0;
+	valortotal = producto.precio * producto.stock;
+	cout << "Valor total del inventario: " << valortotal << endl;
 }
 
 int main() {
@@ -38,21 +58,28 @@ int main() {
     int numProductos = 0;
     int filtrostock = 0;
     int valortotal = 0;
-
-    while (true) {
-       
-        if (nombre == "salir") {
-            break;
-        }
-        valortotal = precio * stock;
-
-        if (stock < 10) {
-            filtrostock++;
-        }
-
-        productos[numProductos] = { nombre, codigo, precio, stock };
-        numProductos++;
-    }
+	int opcion = 0;
+	switch (opcion)
+	case 1: cout << "1. Ingresar producto" << endl;
+	ingresarproducto(productos[numProductos]);
+	case 2: cout << "2. Mostrar productos" << endl;
+		mostrarproductos(productos[numProductos]);
+	case 3: cout << "3. Filtrar productos" << endl;
+		filtrarproductos(productos[numProductos]);
+		filtrostock++;
+		cout << "Cantidad de productos con stock menor a 10: " << filtrostock << endl;
+		calcularinventario(productos[numProductos]);
+		valortotal = productos.precio * productos.stock;
+		cout << "Valor total del inventario: " << valortotal << endl;
+	case 4: cout << "4. Calcular inventario" << endl;
+		calcularinventario(productos[numProductos]);
+		valortotal = productos.precio * productos.stock;
+		cout << "Valor total del inventario: " << valortotal << endl;
+	case 5: cout << "5. Salir" << endl;
+		if (opcion = "5")
+		{
+			break
+		};
 
     cout << "\nLista de productos:\n";
     for (int i = 0; i < numProductos; i++) {
