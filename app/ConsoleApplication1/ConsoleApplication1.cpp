@@ -14,8 +14,8 @@ struct Producto {
 
 void ingresarproducto(Producto& producto) { //funciones: Donda, Patino, Mancini, Rochetti
     cout << "Nombre del producto: ";
-    cin.ignore(); 
-    getline(cin, producto.nombre);
+    cin.ignore(); // para limbiar el buffer de entrada asi evitar traspaso de nombres anteriores
+    getline(cin, producto.nombre); // get line para leer toda la linea
     cout << "Codigo: ";
     cin >> producto.codigo;
     cout << "Precio: ";
@@ -24,7 +24,8 @@ void ingresarproducto(Producto& producto) { //funciones: Donda, Patino, Mancini,
     cin >> producto.stock;
 }
 
-void mostrarproductos(Producto productos[], int numProductos) {
+
+void mostrarproductos(Producto productos[], int numProductos) { //void para no devolver valor esta funcion
     for (int i = 0; i < numProductos; ++i) {
         cout << "Producto #" << i + 1 << ":" << endl;
         cout << "Nombre: " << productos[i].nombre << endl;
@@ -33,6 +34,8 @@ void mostrarproductos(Producto productos[], int numProductos) {
         cout << "Stock: " << productos[i].stock << endl;
     }
 }
+
+
 
 void filtrarproductos(Producto productos[], int numProductos) {
     cout << "Productos con stock menor a 10:\n";
@@ -108,7 +111,7 @@ int main() { //Main: Cabanillas
         default:
             cout << "Opcion no valida. Intente de nuevo." << endl;
         }
-    } while (opcion != 5);
+    } while (opcion != 5); // desiguldad a 5 para salir del programa 
 
     return 0;
 }
