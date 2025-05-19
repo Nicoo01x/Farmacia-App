@@ -24,6 +24,7 @@ void ingresarproducto(Producto& producto) { //funciones: Donda, Patino, Mancini,
     cin >> producto.stock;
 }
 
+
 void mostrarproductos(Producto productos[], int numProductos) {
     for (int i = 0; i < numProductos; ++i) {
         cout << "Producto #" << i + 1 << ":" << endl;
@@ -33,6 +34,8 @@ void mostrarproductos(Producto productos[], int numProductos) {
         cout << "Stock: " << productos[i].stock << endl;
     }
 }
+
+
 
 void filtrarproductos(Producto productos[], int numProductos) {
     cout << "Productos con stock menor a 10:\n";
