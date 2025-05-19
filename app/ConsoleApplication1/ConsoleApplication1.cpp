@@ -11,7 +11,7 @@ struct Producto {
     int stock = 0;
 };
 
-void ingresarproducto(Producto& producto) { //funciones: Donda, Patiño, Mancini, Rochetti
+void ingresarproducto(Producto& producto) { //funciones: Donda, Patino, Mancini, Rochetti
     cout << "Ingrese el nombre del producto: ";
     cin.ignore(); // Limpiar el buffer antes de getline
     getline(cin, producto.nombre);
@@ -27,7 +27,7 @@ void mostrarproductos(Producto productos[], int numProductos) {
     for (int i = 0; i < numProductos; ++i) {
         cout << "Producto #" << i + 1 << ":" << endl;
         cout << "Nombre: " << productos[i].nombre << endl;
-        cout << "Código: " << productos[i].codigo << endl;
+        cout << "Codigo: " << productos[i].codigo << endl;
         cout << "Precio: $" << productos[i].precio << endl;
         cout << "Stock: " << productos[i].stock << endl;
     }
@@ -38,7 +38,7 @@ void filtrarproductos(Producto productos[], int numProductos) {
     int filtrostock = 0;
     for (int i = 0; i < numProductos; ++i) {
         if (productos[i].stock < 10) {
-            cout << "Nombre: " << productos[i].nombre << ", Código: " << productos[i].codigo
+            cout << "Nombre: " << productos[i].nombre << ", Codigo: " << productos[i].codigo
                 << ", Precio: $" << productos[i].precio << ", Stock: " << productos[i].stock << endl;
             filtrostock++;
         }
@@ -76,7 +76,7 @@ int main() { //Main: Cabanillas
                 numProductos++;
             }
             else {
-                cout << "Se ha alcanzado el número máximo de productos." << endl;
+                cout << "Se ha alcanzado el numero maximo de productos." << endl;
             }
             break;
         case 2:
@@ -92,10 +92,9 @@ int main() { //Main: Cabanillas
             cout << "Saliendo del programa." << endl;
             break;
         default:
-            cout << "Opción no válida. Intente de nuevo." << endl;
+            cout << "Opcion no valida. Intente de nuevo." << endl;
         }
     } while (opcion != 5);
- 
+
     return 0;
 }
-
