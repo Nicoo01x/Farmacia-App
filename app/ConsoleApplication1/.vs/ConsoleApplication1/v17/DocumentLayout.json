@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Pc\\Documents\\GitHub\\Farmacia-App\\app\\ConsoleApplication1\\",
+  "WorkspaceRootPath": "C:\\Users\\nicoc\\OneDrive\\Escritorio\\Nueva carpeta\\Farmacia-App\\app\\ConsoleApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EAE8BF9F-B830-4937-960C-85D57B006CC7}|ConsoleApplication1.vcxproj|C:\\Users\\Pc\\Documents\\GitHub\\Farmacia-App\\app\\ConsoleApplication1\\ConsoleApplication1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{EAE8BF9F-B830-4937-960C-85D57B006CC7}|ConsoleApplication1.vcxproj|C:\\Users\\nicoc\\OneDrive\\Escritorio\\Nueva carpeta\\Farmacia-App\\app\\ConsoleApplication1\\ConsoleApplication1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{EAE8BF9F-B830-4937-960C-85D57B006CC7}|ConsoleApplication1.vcxproj|solutionrelative:ConsoleApplication1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -24,11 +24,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ConsoleApplication1.cpp",
-              "DocumentMoniker": "C:\\Users\\Pc\\Documents\\GitHub\\Farmacia-App\\app\\ConsoleApplication1\\ConsoleApplication1.cpp",
+              "DocumentMoniker": "C:\\Users\\nicoc\\OneDrive\\Escritorio\\Nueva carpeta\\Farmacia-App\\app\\ConsoleApplication1\\ConsoleApplication1.cpp",
               "RelativeDocumentMoniker": "ConsoleApplication1.cpp",
-              "ToolTip": "C:\\Users\\Pc\\Documents\\GitHub\\Farmacia-App\\app\\ConsoleApplication1\\ConsoleApplication1.cpp",
+              "ToolTip": "C:\\Users\\nicoc\\OneDrive\\Escritorio\\Nueva carpeta\\Farmacia-App\\app\\ConsoleApplication1\\ConsoleApplication1.cpp",
               "RelativeToolTip": "ConsoleApplication1.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAgwDwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-19T12:18:28.699Z",
               "EditorCaption": ""

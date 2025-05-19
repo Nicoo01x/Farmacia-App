@@ -55,10 +55,23 @@ void calcularinventario(Producto productos[], int numProductos) {
     cout << "Valor total del inventario: $" << valortotal << endl;
 }
 
+
+
 int main() { //Main: Cabanillas
     Producto productos[MAX_PRODUCTOS];
     int numProductos = 0;
     int opcion = 0;
+    cout << R"(
+#######    #    ######  #     #    #    ######  #       #     #  #####  
+#         # #   #     # ##   ##   # #   #     # #       #     # #     # 
+#        #   #  #     # # # # #  #   #  #     # #       #     # #       
+#####   #     # ######  #  #  # #     # ######  #       #     #  #####  
+#       ####### #   #   #     # ####### #       #       #     #       # 
+#       #     # #    #  #     # #     # #       #       #     # #     # 
+#       #     # #     # #     # #     # #       #######  #####   #####     
+)" << endl;
+	cout << "Ingrese enter para comenzar." << endl;
+    cin.get();
 
     do {
         cout << "\nMenu:\n";
