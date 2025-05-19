@@ -14,8 +14,8 @@ struct Producto {
 
 void ingresarproducto(Producto& producto) { //funciones: Donda, Patino, Mancini, Rochetti
     cout << "Nombre del producto: ";
-    cin.ignore(); 
-    getline(cin, producto.nombre);
+    cin.ignore(); // para limbiar el buffer de entrada asi evitar traspaso de nombres anteriores
+    getline(cin, producto.nombre); // get line para leer toda la linea
     cout << "Codigo: ";
     cin >> producto.codigo;
     cout << "Precio: ";
