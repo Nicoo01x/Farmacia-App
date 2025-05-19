@@ -25,7 +25,7 @@ void ingresarproducto(Producto& producto) { //funciones: Donda, Patino, Mancini,
 }
 
 
-void mostrarproductos(Producto productos[], int numProductos) {
+void mostrarproductos(Producto productos[], int numProductos) { //void para no devolver valor esta funcion
     for (int i = 0; i < numProductos; ++i) {
         cout << "Producto #" << i + 1 << ":" << endl;
         cout << "Nombre: " << productos[i].nombre << endl;
@@ -111,7 +111,7 @@ int main() { //Main: Cabanillas
         default:
             cout << "Opcion no valida. Intente de nuevo." << endl;
         }
-    } while (opcion != 5);
+    } while (opcion != 5); // desiguldad a 5 para salir del programa 
 
     return 0;
 }
