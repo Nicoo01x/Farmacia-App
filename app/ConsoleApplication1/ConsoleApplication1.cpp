@@ -11,7 +11,7 @@ struct Producto {
     int stock = 0;
 };
 
-void ingresarproducto(Producto& producto) {
+void ingresarproducto(Producto& producto) { //funciones: Donda, Patiño, Mancini, Rochetti
     cout << "Ingrese el nombre del producto: ";
     cin >> producto.nombre;
     cout << "Ingrese el codigo del producto: ";
@@ -53,7 +53,7 @@ void calcularinventario(Producto productos[], int numProductos) {
     cout << "Valor total del inventario: $" << valortotal << endl;
 }
 
-int main() {
+int main() { //Main: Cabanillas
     Producto productos[MAX_PRODUCTOS];
     int numProductos = 0;
     int opcion = 0;
@@ -94,6 +94,7 @@ int main() {
             cout << "Opción no válida. Intente de nuevo." << endl;
         }
     } while (opcion != 5);
-
+ 
     return 0;
 }
+
