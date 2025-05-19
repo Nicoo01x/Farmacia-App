@@ -1,4 +1,0 @@
-﻿  Farmacia.cpp
-C:\Users\nicoc\OneDrive\Escritorio\Nueva carpeta\Farmacia-App\Farmacia.cpp(38,29): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\nicoc\OneDrive\Escritorio\Nueva carpeta\Farmacia-App\Farmacia.cpp(55,5): error C3872: '0xa0': este carácter no se permite en un identificador
-C:\Users\nicoc\OneDrive\Escritorio\Nueva carpeta\Farmacia-App\Farmacia.cpp(55,5): error C2065: 'returnÂ 0': identificador no declarado
