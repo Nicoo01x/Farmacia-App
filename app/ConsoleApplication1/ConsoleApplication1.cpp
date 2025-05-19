@@ -15,7 +15,6 @@ int main() {
     Producto productos[MAX_PRODUCTOS];
     int numProductos = 0;
     int filtrostock = 0;
-    int valortotal = 0;
 
     while (true) {
         cout << "Ingrese el nombre, codigo, precio y stock del producto (o 'salir' para terminar o mostrar la tabla de productos): " << endl;
@@ -35,14 +34,19 @@ int main() {
         cout << "Stock: " << endl;
         int stock;
         cin >> stock;
-        valortotal = precio * stock;
 
         if (stock < 10) {
             filtrostock++;
         }
 
-        productos[numProductos] = { nombre, codigo, precio, stock };
-        numProductos++;
+        if (numProductos < MAX_PRODUCTOS) {
+            productos[numProductos] = { nombre, codigo, precio, stock };
+            numProductos++;
+        }
+        else {
+            cout << "Se ha alcanzado el número máximo de productos." << endl;
+            break;
+        }
     }
 
     cout << "\nLista de productos:\n";
@@ -52,5 +56,5 @@ int main() {
     }
     cout << "Cantidad de productos con stock menor a 10: " << filtrostock << endl;
 
-    return 0;
+    return 0;
 }
