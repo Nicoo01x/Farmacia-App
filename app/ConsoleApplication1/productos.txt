@@ -1,2 +1,0 @@
-Nombre: Prueba 1, Codigo: 32, Precio: $30000, Stock: 4
-Nombre: Seba, Codigo: 32, Precio: $32000, Stock: 32
