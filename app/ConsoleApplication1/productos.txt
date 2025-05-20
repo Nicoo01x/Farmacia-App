@@ -1,1 +1,0 @@
-Nombre: prueba, Codigo: 32, Precio: $3.02323e+08, Stock: 32
