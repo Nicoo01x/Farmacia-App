@@ -27,6 +27,21 @@ void logs(Producto productos[], int numProductos) { //Cabanillas
 	}
 }
 
+void logsfiltros(Producto productos[], int numProductos) { //Cabanillas
+    ofstream archivo;
+    archivo.open("stockmenora10s.txt", ios::out);
+	if (archivo.is_open()) {
+		for (int i = 0; i < numProductos; ++i) {
+			archivo << "Nombre: " << productos[i].nombre << ", Codigo: " << productos[i].codigo
+          << ", Precio: $" << productos[i].precio << ", Stock: " << productos[i].stock << endl;
+		}
+		archivo.close();
+	}
+	else {
+		cout << "No se pudo abrir el archivo." << endl;
+	}
+}
+
 void ingresarproducto(Producto& producto) { //funciones: Donda, Patino, Mancini, Rochetti
     cout << "Nombre del producto: ";
     cin.ignore(); // para limbiar el buffer de entrada asi evitar traspaso de nombres anteriores
@@ -117,6 +132,7 @@ int main() { //Main: Cabanillas
             break;
         case 3:
             filtrarproductos(productos, numProductos);
+            logsfiltros(productos, numProductos);
             break;
         case 4:
             calcularinventario(productos, numProductos);
