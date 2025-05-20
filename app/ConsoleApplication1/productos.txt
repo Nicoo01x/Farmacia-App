@@ -1,1 +1,0 @@
-Nombre: Prueba, Codigo: 23, Precio: $300000, Stock: 23
