@@ -1,0 +1,1 @@
+Nombre: asas, Codigo: 3, Precio: $3, Stock: 3

@@ -20,11 +20,14 @@ void logs(Producto productos[], int numProductos) { //Cabanillas
 			archivo << "Nombre: " << productos[i].nombre << ", Codigo: " << productos[i].codigo << ", Precio: $" << productos[i].precio << ", Stock: " << productos[i].stock << endl;
 		}
 		archivo.close();    
+        cout << "Productos guardados en el archivo: productos.txt" << endl;
 	}
 	else {
 		cout << "No se pudo abrir el archivo." << endl;
 	}
 }
+
+
 
 
 
