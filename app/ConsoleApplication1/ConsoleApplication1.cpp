@@ -17,8 +17,7 @@ void logs(Producto productos[], int numProductos) { //Cabanillas
     archivo.open("productos.txt", ios::out);
 	if (archivo.is_open()) {
 		for (int i = 0; i < numProductos; ++i) {
-			archivo << "Nombre: " << productos[i].nombre << ", Codigo: " << productos[i].codigo
-          << ", Precio: $" << productos[i].precio << ", Stock: " << productos[i].stock << endl;
+			archivo << "Nombre: " << productos[i].nombre << ", Codigo: " << productos[i].codigo << ", Precio: $" << productos[i].precio << ", Stock: " << productos[i].stock << endl;
 		}
 		archivo.close();    
 	}
