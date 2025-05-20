@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
 
 const int MAX_PRODUCTOS = 100;
@@ -11,6 +12,20 @@ struct Producto {
     int stock = 0;
 };
 
+void logs(Producto productos[], int numProductos) { //Cabanillas
+    ofstream archivo;
+    archivo.open("productos.txt", ios::out);
+	if (archivo.is_open()) {
+		for (int i = 0; i < numProductos; ++i) {
+			archivo << "Nombre: " << productos[i].nombre << ", Codigo: " << productos[i].codigo
+          << ", Precio: $" << productos[i].precio << ", Stock: " << productos[i].stock << endl;
+		}
+		archivo.close();
+	}
+	else {
+		cout << "No se pudo abrir el archivo." << endl;
+	}
+}
 
 void ingresarproducto(Producto& producto) { //funciones: Donda, Patino, Mancini, Rochetti
     cout << "Nombre del producto: ";
@@ -73,7 +88,7 @@ int main() { //Main: Cabanillas
 #       #     # #    #  #     # #     # #       #       #     # #     # 
 #       #     # #     # #     # #     # #       #######  #####   #####     
 )" << endl;
-	cout << "Ingrese enter para comenzar." << endl;
+    cout << "Ingrese enter para comenzar." << endl;
     cin.get();
 
     do {
@@ -91,6 +106,7 @@ int main() { //Main: Cabanillas
             if (numProductos < MAX_PRODUCTOS) {
                 ingresarproducto(productos[numProductos]);
                 numProductos++;
+                logs(productos, numProductos); // Guardar productos en el archivo
             }
             else {
                 cout << "Se ha alcanzado el numero maximo de productos." << endl;
@@ -106,12 +122,14 @@ int main() { //Main: Cabanillas
             calcularinventario(productos, numProductos);
             break;
         case 5:
+            logs(productos, numProductos); // Guardar productos antes de salir
             cout << "Saliendo del programa..." << endl;
             break;
         default:
             cout << "Opcion no valida. Intente de nuevo." << endl;
         }
-    } while (opcion != 5); // desiguldad a 5 para salir del programa 
+    } while (opcion != 5);
 
     return 0;
 }
+
