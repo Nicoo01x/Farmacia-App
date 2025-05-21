@@ -28,11 +28,27 @@ void logs(Producto productos[], int numProductos) { //Cabanillas
 	}
 }
 
+void leerlogs() {
+    ifstream archivo;
+    archivo.open("productos.txt", ios::in);
+    if (archivo.is_open()) {
+        string linea;
+        while (getline(archivo, linea)) {
+            cout << linea << endl;
+        }
+        archivo.close();
+    }
+    else {
+        cout << "No se pudo abrir el archivo." << endl;
+    }
+}
+
+
+//Funciones: Donda, Patino, Mancini.
 
 
 
-
-void ingresarproducto(Producto& producto) { //funciones: Donda, Patino, Mancini, Rochetti
+void ingresarproducto(Producto& producto) { //funciones: Donda, Patino, Mancini.
     cout << "Nombre del producto: ";
     cin.ignore(); // para limbiar el buffer de entrada asi evitar traspaso de nombres anteriores
     getline(cin, producto.nombre); // get line para leer toda la linea
@@ -102,7 +118,8 @@ int main() { //Main: Cabanillas
         cout << "2. Mostrar productos\n";
         cout << "3. Filtrar productos (stock < 10)\n";
         cout << "4. Calcular valor total del inventario\n";
-        cout << "5. Salir\n";
+        cout << "5. Mostrar stock anterior\n";
+        cout << "6. Salir\n";
         cout << "Seleccione una opcion: ";
         cin >> opcion;
 
@@ -127,13 +144,16 @@ int main() { //Main: Cabanillas
             calcularinventario(productos, numProductos);
             break;
         case 5:
+            leerlogs();
+            break;
+		case 6:
             logs(productos, numProductos); // Guardar productos antes de salir
             cout << "Saliendo del programa..." << endl;
             break;
         default:
             cout << "Opcion no valida. Intente de nuevo." << endl;
         }
-    } while (opcion != 5);
+    } while (opcion != 6);
 
     return 0;
 }

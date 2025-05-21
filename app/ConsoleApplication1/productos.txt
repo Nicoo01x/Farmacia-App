@@ -1,1 +1,1 @@
-Nombre: Nico, Codigo: 32, Precio: $33333, Stock: 3
+Nombre: 22323, Codigo: 3, Precio: $3, Stock: 3
