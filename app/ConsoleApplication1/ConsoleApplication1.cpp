@@ -15,7 +15,7 @@ struct Producto {
 
 void logs(Producto productos[], int numProductos) { //Cabanillas
     ofstream archivo;
-    archivo.open("productos.txt", ios::out);
+    archivo.open("productos.txt", ios::app);
 	if (archivo.is_open()) {
 		for (int i = 0; i < numProductos; ++i) {
 			archivo << "Nombre: " << productos[i].nombre << ", Codigo: " << productos[i].codigo << ", Precio: $" << productos[i].precio << ", Stock: " << productos[i].stock << endl;
@@ -28,7 +28,7 @@ void logs(Producto productos[], int numProductos) { //Cabanillas
 	}
 }
 
-void leerlogs() {
+void leerlogs() { 
     ifstream archivo;
     archivo.open("productos.txt", ios::in);
     if (archivo.is_open()) {

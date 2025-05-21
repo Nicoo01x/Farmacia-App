@@ -1,1 +1,4 @@
-Nombre: 22323, Codigo: 3, Precio: $3, Stock: 3
+Nombre: ssdd, Codigo: 3, Precio: $3, Stock: 3
+Nombre: assa, Codigo: 3, Precio: $3, Stock: 3
+Nombre: assa, Codigo: 3, Precio: $3, Stock: 3
+Nombre: prueba, Codigo: 3, Precio: $3, Stock: 3
