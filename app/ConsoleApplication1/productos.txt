@@ -1,1 +1,0 @@
-Nombre: hola, Codigo: 33, Precio: $3, Stock: 3
