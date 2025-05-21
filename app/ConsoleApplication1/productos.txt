@@ -1,1 +1,1 @@
-Nombre: asas, Codigo: 3, Precio: $3, Stock: 3
+Nombre: Nico, Codigo: 32, Precio: $33333, Stock: 3

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <iostream>
 using namespace std;
 
 const int MAX_PRODUCTOS = 100;
