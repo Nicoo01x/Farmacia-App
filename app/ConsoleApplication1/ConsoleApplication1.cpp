@@ -118,7 +118,7 @@ int main() { //Main: Cabanillas
     do {
         cout << "\nMenu:\n";
         cout << "1. Ingresar producto\n";
-        cout << "2. Mostrar productos\n";
+        cout << "2. Mostrar productos cargados recientemente\n";
         cout << "3. Filtrar productos (stock < 10)\n";
         cout << "4. Calcular valor total del inventario\n";
         cout << "5. Mostrar stock anterior\n";
