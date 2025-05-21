@@ -28,9 +28,6 @@ void logs(Producto productos[], int numProductos) { //Cabanillas
 }
 
 
-
-
-
 void ingresarproducto(Producto& producto) { //funciones: Donda, Patino, Mancini, Rochetti
     cout << "Nombre del producto: ";
     cin.ignore(); // para limbiar el buffer de entrada asi evitar traspaso de nombres anteriores
