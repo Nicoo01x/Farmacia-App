@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <iostream>
 using namespace std;
 
 const int MAX_PRODUCTOS = 100;
@@ -16,19 +15,20 @@ struct Producto {
 void logs(Producto productos[], int numProductos) { //Cabanillas
     ofstream archivo;
     archivo.open("productos.txt", ios::app);
-	if (archivo.is_open()) {
-		for (int i = 0; i < numProductos; ++i) {
-			archivo << "Nombre: " << productos[i].nombre << ", Codigo: " << productos[i].codigo << ", Precio: $" << productos[i].precio << ", Stock: " << productos[i].stock << endl;
-		}
-		archivo.close();    
+    if (archivo.is_open()) {
+        for (int i = 0; i < numProductos; ++i) {
+            archivo << "Nombre: " << productos[i].nombre << ", Codigo: " << productos[i].codigo
+                << ", Precio: $" << productos[i].precio << ", Stock: " << productos[i].stock << endl;
+        }
+        archivo.close();
         cout << "Productos guardados en el archivo: productos.txt" << endl;
-	}
-	else {
-		cout << "No se pudo abrir el archivo." << endl;
-	}
+    }
+    else {
+        cout << "No se pudo abrir el archivo." << endl;
+    }
 }
 
-void leerlogs() { 
+void leerlogs() {
     ifstream archivo;
     archivo.open("productos.txt", ios::in);
     if (archivo.is_open()) {
@@ -43,6 +43,16 @@ void leerlogs() {
     }
 }
 
+void borrarlogs() {
+    ofstream archivo("productos.txt", ios::trunc); // Abrir en modo truncar
+    if (archivo.is_open()) {
+        archivo.close();
+        cout << "El archivo productos.txt ha sido borrado (vaciado) correctamente." << endl;
+    }
+    else {
+        cout << "No se pudo abrir el archivo para borrar su contenido." << endl;
+    }
+}
 
 //Funciones: Donda, Patino, Mancini.
 
@@ -58,7 +68,6 @@ void ingresarproducto(Producto& producto) { //funciones: Donda, Patino, Mancini.
     cin >> producto.stock;
 }
 
-
 void mostrarproductos(Producto productos[], int numProductos) { //void para no devolver valor esta funcion
     for (int i = 0; i < numProductos; ++i) {
         cout << "Producto #" << i + 1 << ":" << endl;
@@ -68,8 +77,6 @@ void mostrarproductos(Producto productos[], int numProductos) { //void para no d
         cout << "Stock: " << productos[i].stock << endl;
     }
 }
-
-
 
 void filtrarproductos(Producto productos[], int numProductos) {
     cout << "Productos con stock menor a 10:\n";
@@ -91,8 +98,6 @@ void calcularinventario(Producto productos[], int numProductos) {
     }
     cout << "Valor total del inventario: $" << valortotal << endl;
 }
-
-
 
 int main() { //Main: Cabanillas
     Producto productos[MAX_PRODUCTOS];
@@ -117,7 +122,8 @@ int main() { //Main: Cabanillas
         cout << "3. Filtrar productos (stock < 10)\n";
         cout << "4. Calcular valor total del inventario\n";
         cout << "5. Mostrar stock anterior\n";
-        cout << "6. Salir\n";
+        cout << "6. Borrar todo el contenido de productos.txt\n";
+        cout << "7. Salir\n";
         cout << "Seleccione una opcion: ";
         cin >> opcion;
 
@@ -144,15 +150,17 @@ int main() { //Main: Cabanillas
         case 5:
             leerlogs();
             break;
-		case 6:
+        case 6:
+            borrarlogs();
+            break;
+        case 7:
             logs(productos, numProductos); // Guardar productos antes de salir
             cout << "Saliendo del programa..." << endl;
             break;
         default:
             cout << "Opcion no valida. Intente de nuevo." << endl;
         }
-    } while (opcion != 6);
+    } while (opcion != 7);
 
     return 0;
 }
-
