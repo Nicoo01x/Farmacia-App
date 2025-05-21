@@ -2,3 +2,7 @@ Nombre: ssdd, Codigo: 3, Precio: $3, Stock: 3
 Nombre: assa, Codigo: 3, Precio: $3, Stock: 3
 Nombre: assa, Codigo: 3, Precio: $3, Stock: 3
 Nombre: prueba, Codigo: 3, Precio: $3, Stock: 3
+Nombre: Nico 0.6, Codigo: 3, Precio: $3, Stock: 3
+Nombre: nico, Codigo: 32, Precio: $3, Stock: 3
+Nombre: nico, Codigo: 32, Precio: $3, Stock: 3
+Nombre: asas, Codigo: 3, Precio: $3, Stock: 3
