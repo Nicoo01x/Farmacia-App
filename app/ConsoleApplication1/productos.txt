@@ -1,0 +1,2 @@
+Nombre: clear, Codigo: 32, Precio: $3, Stock: 3
+Nombre: 3, Codigo: 23, Precio: $23, Stock: 23

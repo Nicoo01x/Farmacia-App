@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <cstdlib> // Para system()
 using namespace std;
 
 const int MAX_PRODUCTOS = 100;
@@ -11,6 +12,15 @@ struct Producto {
     float precio = 0.0;
     int stock = 0;
 };
+
+// Función para limpiar la consola
+void limpiarConsola() {
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+}
 
 void logs(Producto productos[], int numProductos) { //Cabanillas
     ofstream archivo;
@@ -104,18 +114,18 @@ int main() { //Main: Cabanillas
     int numProductos = 0;
     int opcion = 0;
     cout << R"(
-#######    #    ######  #     #    #    ######  #       #     #  #####  
-#         # #   #     # ##   ##   # #   #     # #       #     # #     # 
-#        #   #  #     # # # # #  #   #  #     # #       #     # #       
-#####   #     # ######  #  #  # #     # ######  #       #     #  #####  
-#       ####### #   #   #     # ####### #       #       #     #       # 
-#       #     # #    #  #     # #     # #       #       #     # #     # 
-#       #     # #     # #     # #     # #       #######  #####   #####     
+    ______                           ____  __          
+   / ____/___ __________ ___  ____ _/ __ \/ /_  _______
+  / /_  / __ `/ ___/ __ `__ \/ __ `/ /_/ / / / / / ___/
+ / __/ / /_/ / /  / / / / / / /_/ / ____/ / /_/ (__  ) 
+/_/    \____/_/  /_/ /_/ /_/\____/_/   /_/\____/____/  
+                                                       
 )" << endl;
     cout << "Ingrese enter para comenzar." << endl;
     cin.get();
 
     do {
+        limpiarConsola(); // Limpia la consola antes de mostrar el menú
         cout << "\nMenu:\n";
         cout << "1. Ingresar producto\n";
         cout << "2. Mostrar productos cargados recientemente\n";
@@ -153,7 +163,7 @@ int main() { //Main: Cabanillas
         case 6:
             borrarlogs();
             break;
-        case 7:
+        case 8:
             logs(productos, numProductos); // Guardar productos antes de salir
             cout << "Saliendo del programa..." << endl;
             break;
