@@ -54,7 +54,7 @@ void leerlogs() {
 }
 
 void borrarlogs() {
-    ofstream archivo("productos.txt", ios::trunc); // Abrir en modo truncar
+    ofstream archivo("productos.txt", ios::trunc); 
     if (archivo.is_open()) {
         archivo.close();
         cout << "El archivo productos.txt ha sido borrado (vaciado) correctamente." << endl;
