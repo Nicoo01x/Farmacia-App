@@ -13,7 +13,7 @@ struct Producto {
     int stock = 0;
 };
 
-// Función para limpiar la consola
+// Funciï¿½n para limpiar la consola
 void limpiarConsola() {
 #ifdef _WIN32
     system("cls");
@@ -124,8 +124,7 @@ int main() { //Main: Cabanillas
     cout << "Ingrese enter para comenzar." << endl;
     cin.get();
 
-    do {
-        limpiarConsola(); // Limpia la consola antes de mostrar el menú
+    do {// Limpia la consola antes de mostrar el menï¿½
         cout << "\nMenu:\n";
         cout << "1. Ingresar producto\n";
         cout << "2. Mostrar productos cargados recientemente\n";
@@ -134,6 +133,7 @@ int main() { //Main: Cabanillas
         cout << "5. Mostrar stock anterior\n";
         cout << "6. Borrar todo el contenido de productos.txt\n";
         cout << "7. Salir\n";
+        cout << "8. Limpiar la pantalla \n";
         cout << "Seleccione una opcion: ";
         cin >> opcion;
 
@@ -163,9 +163,13 @@ int main() { //Main: Cabanillas
         case 6:
             borrarlogs();
             break;
-        case 8:
+        case 7:
             logs(productos, numProductos); // Guardar productos antes de salir
             cout << "Saliendo del programa..." << endl;
+            break;
+        case 8:
+            limpiarConsola();
+            cout << "Pantalla limpiada." << endl;
             break;
         default:
             cout << "Opcion no valida. Intente de nuevo." << endl;
